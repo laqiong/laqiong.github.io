@@ -1,29 +1,49 @@
 ---
 layout: default
 ---
-<article class="page-content fade-in">
-  <div class="post-header">
+<article class="article-page fade-in">
+  <header class="article-header">
+    {% if page.tags and page.tags.size > 0 %}
+    <span class="post-category">{{ page.tags[0] }}</span>
+    {% endif %}
     <h1>{{ page.title }}</h1>
-    <div class="post-meta">
+    <div class="article-meta">
       <span>📅 {{ page.date | date: "%Y年%m月%d日" }}</span>
+      <span class="meta-divider"></span>
       {% if page.reading_time %}
       <span>⏱ {{ page.reading_time }}</span>
+      <span class="meta-divider"></span>
       {% endif %}
+      <span>✍️ laqiong</span>
     </div>
-    {% if page.tags %}
-    <div class="post-tags" style="margin-top:12px;">
+    {% if page.tags and page.tags.size > 0 %}
+    <div style="margin-top:16px;display:flex;gap:6px;justify-content:center;">
       {% for tag in page.tags %}
       <span class="tag">{{ tag }}</span>
       {% endfor %}
     </div>
     {% endif %}
-  </div>
-  <hr class="divider" style="margin:0 0 32px;">
-  <div class="post-content">
+  </header>
+
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:48px auto;width:60px;">
+
+  <div class="article-body">
     {{ content }}
   </div>
-  <hr class="divider">
-  <div style="text-align:center;">
-    <a href="/blog.html" class="btn btn-secondary">← 返回博客</a>
-  </div>
+
+  <!-- Article Footer -->
+  <footer class="article-footer">
+    <div class="share-section">
+      <span>分享这篇文章：</span>
+      <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ' ' + window.location.href)">𝕏 Twitter</button>
+      <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='已复制！';">📋 复制链接</button>
+    </div>
+
+    <nav class="article-nav">
+      <a href="/blog.html">
+        <span class="nav-label">← 返回</span>
+        <span>博客列表</span>
+      </a>
+    </nav>
+  </footer>
 </article>
