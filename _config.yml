@@ -1,0 +1,22 @@
+title: 像企业家一样写作
+description: 用写作重新定义你的事业
+url: "https://laqiong.github.io"
+baseurl: ""
+lang: zh-CN
+author: laqiong
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
