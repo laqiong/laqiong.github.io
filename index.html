@@ -1,157 +1,69 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>laqiong - 个人主页</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            color: white;
-        }
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .card h2 {
-            color: #667eea;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
-        }
-        .card p {
-            margin-bottom: 10px;
-            color: #555;
-        }
-        .tag {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            margin: 5px 5px 5px 0;
-        }
-        .project {
-            border-left: 3px solid #667eea;
-            padding-left: 15px;
-            margin: 15px 0;
-        }
-        .project h3 {
-            color: #333;
-            margin-bottom: 5px;
-        }
-        .btn {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 10px;
-            transition: background 0.3s ease;
-        }
-        .btn:hover {
-            background: #5a6fd6;
-        }
-        a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: white;
-            opacity: 0.8;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>laqiong</h1>
-            <p>热爱生活，探索未知</p>
-        </header>
+---
+layout: default
+title: 首页
+---
+<div class="hero fade-in">
+  <span class="hero-emoji">✍️</span>
+  <h1>像企业家一样写作</h1>
+  <p>用文字构建影响力，用思想创造价值。<br>写作不只是表达，更是一种商业思维。</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+    <a href="/course.html" class="btn btn-primary btn-lg">了解课程 →</a>
+    <a href="/blog.html" class="btn btn-secondary btn-lg">阅读博客</a>
+  </div>
+</div>
 
-        <div class="card">
-            <h2>👋 关于我</h2>
-            <p>欢迎来到我的个人主页！这里是我记录学习、分享想法的地方。</p>
-            <p>喜欢折腾新技术，享受解决问题的过程。</p>
-            <div style="margin-top: 15px;">
-                <span class="tag">编程</span>
-                <span class="tag">开源</span>
-                <span class="tag">学习</span>
-                <span class="tag">分享</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>📷 我的画廊</h2>
-            <p>这里收藏了我的一些摄影作品和生活记录。</p>
-            <a href="gallery.html" class="btn">浏览画廊 →</a>
-        </div>
-
-        <div class="card">
-            <h2>🚀 项目</h2>
-            <div class="project">
-                <h3>个人网站</h3>
-                <p>基于 GitHub Pages 搭建的静态网站，记录学习笔记和生活点滴。</p>
-            </div>
-            <div class="project">
-                <h3>开源贡献</h3>
-                <p>积极参与开源社区，提交 PR、修复 Bug、完善文档。</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>📝 最近动态</h2>
-            <p>• 搭建了个人 GitHub Pages 网站</p>
-            <p>• 添加了响应式图片画廊</p>
-            <p>• 学习 GitHub Actions 自动化部署</p>
-        </div>
-
-        <div class="card">
-            <h2>📮 联系我</h2>
-            <p>GitHub：<a href="https://github.com/laqiong">@laqiong</a></p>
-            <p>欢迎交流技术问题，一起进步！</p>
-        </div>
-
-        <footer>
-            <p>© 2026 laqiong | Powered by GitHub Pages</p>
-        </footer>
+<div class="page-content">
+  <!-- 核心理念 -->
+  <div class="section">
+    <h2 class="section-title">核心理念</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div style="font-size:1.8em;margin-bottom:12px;">🎯</div>
+        <h3 style="font-weight:600;margin-bottom:8px;">目标驱动</h3>
+        <p style="color:var(--text-secondary);font-size:0.95em;">每一篇文章都有明确的目的。不是为了写而写，而是为了解决问题、传递价值而写。</p>
+      </div>
+      <div class="card">
+        <div style="font-size:1.8em;margin-bottom:12px;">💡</div>
+        <h3 style="font-weight:600;margin-bottom:8px;">思维先行</h3>
+        <p style="color:var(--text-secondary);font-size:0.95em;">写作的本质是思考。好的写作者首先是好的思考者，文字只是思维的载体。</p>
+      </div>
+      <div class="card">
+        <div style="font-size:1.8em;margin-bottom:12px;">📈</div>
+        <h3 style="font-weight:600;margin-bottom:8px;">持续复利</h3>
+        <p style="color:var(--text-secondary);font-size:0.95em;">每一篇文章都是资产。它们24小时为你工作，持续带来影响力、信任和机会。</p>
+      </div>
     </div>
-</body>
-</html>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 最新文章 -->
+  <div class="section">
+    <h2 class="section-title">最新文章</h2>
+    {% for post in site.posts limit:3 %}
+    <div class="post-item">
+      <div>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <div class="post-tags" style="margin-top:4px;">
+          {% for tag in post.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+    </div>
+    {% endfor %}
+    <div style="margin-top:20px;">
+      <a href="/blog.html" class="btn btn-secondary">查看全部文章 →</a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- CTA -->
+  <div class="section" style="text-align:center;">
+    <h2 class="section-title">准备好开始了吗？</h2>
+    <p class="section-desc">加入课程，学习如何把写作变成你最有价值的商业技能。</p>
+    <a href="/course.html" class="btn btn-primary btn-lg">了解课程 →</a>
+  </div>
+</div>
