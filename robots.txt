@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://laqiong.github.io/sitemap.xml
