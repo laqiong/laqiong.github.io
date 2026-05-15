@@ -14,12 +14,16 @@ description: 免费资源下载，书籍、壁纸等
         📚 书籍
       </h3>
       <a href="/downloads/pastor%E9%94%80%E5%94%AE.pdf" download style="text-decoration:none;color:inherit;">
-        <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;margin-bottom:10px;transition:all 0.15s;" onmouseover="this.style.boxShadow='var(--shadow-sm)'" onmouseout="this.style.boxShadow=''">
-          <div>
-            <div style="font-weight:500;">Pastor 销售</div>
-            <div style="color:var(--text-tertiary);font-size:0.85em;margin-top:3px;">PDF · 967 KB</div>
+        <div class="dl-card">
+          <div class="dl-icon">📄</div>
+          <div class="dl-info">
+            <div class="dl-name">Pastor 销售</div>
+            <div class="dl-meta">PDF · 967 KB</div>
           </div>
-          <span class="tag" style="background:var(--green-light);color:var(--green);">⬇ 下载</span>
+          <div class="dl-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 10.5L4 6.5h3V2h2v4.5h3L8 10.5z" fill="currentColor"/><path d="M13 12v1.5H3V12H2v2a1 1 0 001 1h10a1 1 0 001-1v-2h-1z" fill="currentColor"/></svg>
+            下载
+          </div>
         </div>
       </a>
     </div>
@@ -29,17 +33,19 @@ description: 免费资源下载，书籍、壁纸等
       <h3 style="font-size:1.1em;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;">
         🖼️ 手机壁纸
       </h3>
-      <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;margin-bottom:10px;">
-        <div>
-          <div style="font-weight:500;">写作金句壁纸 #01</div>
-          <div style="color:var(--text-tertiary);font-size:0.85em;margin-top:3px;">JPG · 1080×1920</div>
+      <div class="dl-card dl-disabled">
+        <div class="dl-icon">🖼️</div>
+        <div class="dl-info">
+          <div class="dl-name">写作金句壁纸 #01</div>
+          <div class="dl-meta">JPG · 1080×1920</div>
         </div>
         <span class="tag" style="background:var(--yellow-light);color:var(--yellow);">即将上线</span>
       </div>
-      <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;margin-bottom:10px;">
-        <div>
-          <div style="font-weight:500;">写作金句壁纸 #02</div>
-          <div style="color:var(--text-tertiary);font-size:0.85em;margin-top:3px;">JPG · 1080×1920</div>
+      <div class="dl-card dl-disabled">
+        <div class="dl-icon">🖼️</div>
+        <div class="dl-info">
+          <div class="dl-name">写作金句壁纸 #02</div>
+          <div class="dl-meta">JPG · 1080×1920</div>
         </div>
         <span class="tag" style="background:var(--yellow-light);color:var(--yellow);">即将上线</span>
       </div>
@@ -50,10 +56,11 @@ description: 免费资源下载，书籍、壁纸等
       <h3 style="font-size:1.1em;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;">
         🛠️ 工具模板
       </h3>
-      <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;margin-bottom:10px;">
-        <div>
-          <div style="font-weight:500;">文章选题模板</div>
-          <div style="color:var(--text-tertiary);font-size:0.85em;margin-top:3px;">Markdown · 即将上线</div>
+      <div class="dl-card dl-disabled">
+        <div class="dl-icon">📋</div>
+        <div class="dl-info">
+          <div class="dl-name">文章选题模板</div>
+          <div class="dl-meta">Markdown · 即将上线</div>
         </div>
         <span class="tag" style="background:var(--yellow-light);color:var(--yellow);">即将上线</span>
       </div>
@@ -65,3 +72,74 @@ description: 免费资源下载，书籍、壁纸等
     </div>
   </div>
 </div>
+
+<style>
+.dl-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  margin-bottom: 10px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.dl-card:hover {
+  border-color: var(--accent);
+  box-shadow: rgba(35,131,226,0.08) 0px 0px 0px 1px, rgba(15,15,15,0.08) 0px 5px 16px;
+  transform: translateY(-1px);
+}
+.dl-card.dl-disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+.dl-card.dl-disabled:hover {
+  border-color: var(--border-color);
+  box-shadow: none;
+  transform: none;
+}
+.dl-icon {
+  font-size: 1.6em;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+}
+.dl-info {
+  flex: 1;
+  min-width: 0;
+}
+.dl-name {
+  font-weight: 550;
+  font-size: 0.98em;
+  color: var(--text-primary);
+}
+.dl-meta {
+  color: var(--text-tertiary);
+  font-size: 0.82em;
+  margin-top: 2px;
+}
+.dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.85em;
+  font-weight: 500;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+.dl-card:hover .dl-btn {
+  background: var(--accent-hover);
+  box-shadow: 0 2px 8px rgba(35,131,226,0.25);
+}
+</style>
